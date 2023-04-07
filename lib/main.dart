@@ -10,16 +10,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text.rich(
-        TextSpan(
-          text: 'Fr',
-          children: [
-            TextSpan(text: 'an'),
-            TextSpan(text: 'ce'),
-          ],
-        ),
+    return Center(
+      child: Text(
+        'Hello, world !',
         textDirection: TextDirection.ltr,
+        style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+            fontSize: 50,
+            // backgroundColor: Colors.purple,
+            foreground: Paint()
+              ..color = const Color(0xffA8CBFD)
+              ..strokeWidth = 2
+              ..style = PaintingStyle.stroke,
+            decoration: TextDecoration.underline,
+            decorationColor: Colors.red,
+            decorationStyle: TextDecorationStyle.wavy),
       ),
     );
   }
